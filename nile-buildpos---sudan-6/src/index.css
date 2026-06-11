@@ -1,0 +1,191 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Cairo", system-ui, sans-serif;
+  --font-cairo: "Cairo", sans-serif;
+  
+  --color-apple-bg: var(--apple-bg);
+  --color-apple-surface: var(--apple-surface);
+  --color-apple-text-primary: var(--apple-text-primary);
+  --color-apple-text-secondary: var(--apple-text-secondary);
+  --color-apple-accent: #0071e3;
+  --color-apple-accent-hover: #0077ed;
+  --color-apple-danger: #ff3b30;
+  --color-apple-success: #34c759;
+  --color-apple-border: var(--apple-border);
+}
+
+:root {
+  --apple-bg: #ffffff;
+  --apple-surface: #f5f5f7;
+  --apple-text-primary: #1d1d1f;
+  --apple-text-secondary: #6e6e73;
+  --apple-border: #d2d2d7;
+}
+
+.dark {
+  --apple-bg: #1c1c1e;
+  --apple-surface: #2c2c2e;
+  --apple-text-primary: #f5f5f7;
+  --apple-text-secondary: #aeaeb2;
+  --apple-border: #3a3a3c;
+}
+
+body {
+  background-color: var(--apple-bg);
+  color: var(--apple-text-primary);
+  font-family: "Inter", "Cairo", system-ui, sans-serif;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Let's automatically map standard classes to dark values when .dark class is added to root */
+.dark .bg-white {
+  background-color: #2c2c2e !important;
+}
+.dark .bg-\[\#ffffff\] {
+  background-color: #1c1c1e !important;
+}
+.dark .bg-\[\#f5f5f7\] {
+  background-color: #1c1c1e !important;
+}
+.dark .text-\[\#1d1d1f\] {
+  color: #f5f5f7 !important;
+}
+.dark .text-\[\#6e6e73\] {
+  color: #aeaeb2 !important;
+}
+.dark .border-\[\#d2d2d7\] {
+  border-color: #3d3d42 !important;
+}
+.dark .hover\:bg-\[\#f5f5f7\]:hover {
+  background-color: #3a3a3c !important;
+}
+.dark .hover\:text-\[\#1d1d1f\]:hover {
+  color: #ffffff !important;
+}
+.dark .bg-\[\#f5f5f7\]\/50 {
+  background-color: rgba(44, 44, 46, 0.5) !important;
+}
+.dark .border-\[#f5f5f7\] {
+  border-color: #3d3d42 !important;
+}
+.dark input {
+  background-color: #1c1c1e !important;
+  color: #f5f5f7 !important;
+  border-color: #3a3a3c !important;
+}
+.dark select {
+  background-color: #1c1c1e !important;
+  color: #f5f5f7 !important;
+  border-color: #3a3a3c !important;
+}
+.dark option {
+  background-color: #1c1c1e !important;
+  color: #f5f5f7 !important;
+}
+.dark table {
+  background-color: #2c2c2e !important;
+}
+.dark tr:hover {
+  background-color: #3a3a3c !important;
+}
+.dark td, .dark th {
+  border-color: #3a3a3c !important;
+}
+.dark .border-b {
+  border-color: #3a3a3c !important;
+}
+.dark .bg-gray-100 {
+  background-color: #3a3a3c !important;
+}
+.dark .text-gray-900 {
+  color: #ffffff !important;
+}
+.dark .text-gray-700 {
+  color: #e5e5ea !important;
+}
+.dark .text-gray-500 {
+  color: #aeaeb2 !important;
+}
+.dark .border-gray-200 {
+  border-color: #3a3a3c !important;
+}
+.dark .bg-zinc-100 {
+  background-color: #3a3a3c !important;
+}
+.dark .border-zinc-200 {
+  border-color: #3a3a3c !important;
+}
+.dark .bg-zinc-50 {
+  background-color: #1c1c1e !important;
+}
+.dark .bg-emerald-500 {
+  background-color: #34c759 !important;
+}
+.dark .text-zinc-600 {
+  color: #aeaeb2 !important;
+}
+.dark .text-zinc-500 {
+  color: #8e8e93 !important;
+}
+.dark .bg-slate-50 {
+  background-color: #1c1c1e !important;
+}
+.dark .border-slate-200 {
+  border-color: #3a3a3c !important;
+}
+.dark .text-[#1d1d1f] {
+  color: #f5f5f7 !important;
+}
+.dark .text-[#6e6e73] {
+  color: #aeaeb2 !important;
+}
+
+[dir="rtl"] {
+  font-family: "Cairo", "Inter", system-ui, sans-serif;
+}
+
+[dir="rtl"] body {
+  font-family: "Cairo", "Inter", system-ui, sans-serif;
+}
+
+/* Print custom styling */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  @page {
+    margin: 0.5cm;
+    size: portrait;
+  }
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 11px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}
+
+.print-only {
+  display: none;
+}
+
+/* Elegant scrollbar to match Apple style */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #d2d2d7;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #86868b;
+}

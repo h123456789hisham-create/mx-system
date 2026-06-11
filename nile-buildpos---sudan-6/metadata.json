@@ -1,0 +1,6 @@
+{
+  "name": "MX Energy - Lighting Solutions",
+  "description": "إم اكس للطاقه وحلول الإضاءة شريك استراتيجي في الابتكار - نظام كاشير ومستودعات ومتابعة حسابات سوداني متكامل لقطع الطاقة ومستلزمات الإنارة الحديثة والتوزيع.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

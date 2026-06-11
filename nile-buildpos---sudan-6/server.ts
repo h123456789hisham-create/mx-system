@@ -9,7 +9,7 @@ import {
   saveGlobalToDB, 
   loadAllTenantsFromDB, 
   saveTenantToDB 
-} from "./mysql-db.js";
+} from "./mysql-db";
 
 const app = express();
 const PORT = 3000;
